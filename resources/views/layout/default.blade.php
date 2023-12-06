@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme='dark'>
 @include('components.head')
 <body>
     <div class = "container">
