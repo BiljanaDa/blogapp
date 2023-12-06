@@ -25,3 +25,8 @@ Route::get('/posts/{title}', [PostController::class, 'show']);
 Route::get('/createpost', [PostController::class, 'showCreatePost']);
 Route::post('/createpost', [PostController::class, 'store']);
 Route::post('/createcomment', [CommentController::class, 'store']);
+Route::get('/table', function () {
+    return view('pages.table');
+});
+Route::get('/table', [PostController::class, 'table']);
+Route::get('/deletepost/{id}', [PostController::class, 'destroy']);
