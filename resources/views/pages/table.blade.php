@@ -17,7 +17,7 @@
                 @foreach ($posts as $post)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td><a href="/posts/{{ $post->id }}">{{ $post->title }}</a></td>
+                        <td><a href="/posts/{{ $post->title }}">{{ $post->title }}</a></td>
                         <td>{{ $post->category }}</td>
                         <td>
                             <a href="/deletepost/{{ $post->id }}" class="btn btn-danger">Delete</a>

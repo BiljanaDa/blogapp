@@ -52,6 +52,8 @@ class CommentController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $comment=Comment::where('id',$id)->first();
+        $comment->destroy($id);
+        return redirect()->back();
     }
 }

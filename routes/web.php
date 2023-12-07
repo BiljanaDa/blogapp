@@ -30,3 +30,6 @@ Route::get('/table', function () {
 });
 Route::get('/table', [PostController::class, 'table']);
 Route::get('/deletepost/{id}', [PostController::class, 'destroy']);
+
+Route::get('/deletecomment/{id}', [CommentController::class, 'destroy']);
+
