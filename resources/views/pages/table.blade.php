@@ -3,25 +3,28 @@
 
 @section('content')
     <h1>Welcome to my blog</h1>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Title</th>
-                <th scope="col">Body</th>
-                <th scope="col"></th>
-            </tr>
-        </thead>
-        <tbody>
-
-            @foreach ($posts as $post)
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
                 <tr>
-                    <td><a href="/posts/ {{ $post->id }}">{{ $post->title }}</a></td>
-                    <td>{{ $post->category }}</td>
-                    <td><a href="/deletepost/{{ $post->id }}">Delete</a></td>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Actions</th>
                 </tr>
-            @endforeach
-
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach ($posts as $post)
+                    <tr>
+                        <td>{{ $loop->iteration }}</td>
+                        <td><a href="/posts/{{ $post->id }}">{{ $post->title }}</a></td>
+                        <td>{{ $post->category }}</td>
+                        <td>
+                            <a href="/deletepost/{{ $post->id }}" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
 @endsection

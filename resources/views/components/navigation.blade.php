@@ -15,6 +15,9 @@
           <li class="nav-item">
             <a class="nav-link" href="/createpost">Create Post</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/table">Posts List</a>
+          </li>
         </ul>
       </div>
     </div>

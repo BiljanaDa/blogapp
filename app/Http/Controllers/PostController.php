@@ -31,9 +31,8 @@ class PostController extends Controller
      */
     public function store(CreatePostRequest $request)
     {
-       $post = Post::create($request->all());
-
-       return redirect('/createpost')->with('status', 'Post created successfully!');
+        $post = Post::create($request->all());
+        return redirect('/createpost')->with('status', 'Post created successfully!');
     }
 
     /**

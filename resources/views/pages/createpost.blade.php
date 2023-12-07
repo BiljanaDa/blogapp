@@ -3,7 +3,10 @@
 @section('content')
 <form method="POST" action="{{ 'createpost' }}"> 
     @csrf
-    
+    <div class="mb-3">
+      <label class="form-label">Title</label>
+      <input type="text" class="form-control" name="title" required>
+    </div>
     <div class="mb-3">
         <label class="form-label">Body</label>
         <textarea class="form-control" name="body" cols="30" rows="10" required></textarea>
